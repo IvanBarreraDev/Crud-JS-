@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/97d5066892.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.0.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="dataTables.bootstrap5.css">
+    <link rel="stylesheet" href="main.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <title>Tablas</title>
+</head>
+
+<body>
+    <header>
+        <h1>Tabla ordenada</h1>
+    </header>
+    <main>
+        <aside>
+            <h3>Nueva Persona</h3>
+            <form action="" id="formNuevaPersona">
+                <div class="inputCont">
+                    <input type="text" name="nombre" id="nombre" required placeholder="Nombre">
+                    <input type="text" name="apellido" id="apellido" required placeholder="Apellido">
+                    <input type="number" name="edad" id="edad" min="0" max="150" required placeholder="Edad">
+                    <!--Fecha cargada por js-->
+                </div>
+                <div class="botonCont">
+                    <label>
+                        <input type="submit" id="BotonEnviar" value="Cargar">
+                    </label>
+                </div>
+            </form>
+        </aside>
+        <section>
+            <table id="TablePersonas" class="table table-striped" style="width:100%">
+                <thead>
+                    <tr>
+                        <th>Nombre</th>
+                        <th>Apellido</th>
+                        <th>Edad</th>
+                        <th>Fecha de carga</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Ivan</td>
+                        <td>Barrera</td>
+                        <td>21</td>
+                        <td>27/12/2021</td>
+                    </tr>
+                    <tr>
+                        <td>Marcos</td>
+                        <td>Galperin</td>
+                        <td>45</td>
+                        <td>31/12/2021</td>
+                    </tr>
+                    <tr>
+                        <td>Jeff</td>
+                        <td>Bezos</td>
+                        <td>42</td>
+                        <td>27/12/2021</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+    </main>
+    <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
+    <script src="https://cdn.datatables.net/1.11.3/js/jquery.dataTables.min.js"></script>
+    <script src="https://cdn.datatables.net/1.11.3/js/dataTables.bootstrap5.min.js"></script>
+    <script src="script - copia.js">
+    </script>
+</body>
+
+</html>
