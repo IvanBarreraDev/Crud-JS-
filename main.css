@@ -1,140 +1,186 @@
-body{
-    margin: 0;
-    padding: 0;
-    font-family: Arial, Helvetica, sans-serif;
-    font-size: 18px;
-    background-color: #699fad;
-
-;
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 18px;
+  background-color: #699fad;
 }
-h1{
-    text-align: center;
-    font-weight: bolder;
+h1 {
+    margin-top: 2rem;
+  text-align: center;
+  font-weight: bolder;
+  color: #FFFFFF;
+  text-shadow: 4px 3px 0px #7A7A7A;
 }
-main{
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    margin: 0 20px;
+h1 span{
+    color: #fcff4d;
+}
+main {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  margin: 0 20px;
 }
 /*Section*/
-section{
-    width: 100%;
+section {
+  width: 100%;
 }
-table{
-    margin: auto;
-    border-spacing: 0;
+/*Tabla*/
+
+table {
+  margin: 0;
+  border-spacing: 0;
+  width: 100%;
 }
-thead{
-    background-color: rgba(0, 0, 0, 0.5);
+thead {
+  background-color: rgba(0, 0, 0, 0.5);
+  width: 100%;
 }
-table tr th{
-    text-align: center;
-    color: white;
-    width: 25%;
-    padding: 10px 0;
+table tr th {
+  text-align: center;
+  color: white;
+  width: 25%;
+  padding: 10px 0;
 }
-table tr td{
-    text-align: center;
-    color: white;
-    width: 25%;
-    background-color: rgba(255, 255, 255, 0.377);
-    padding: 1rem 0;
+table tr td {
+  text-align: center;
+  color: white;
+  width: 25%;
+  background-color: rgba(255, 255, 255, 0.377);
+  padding: 1rem 0;
 }
-tbody{
-    position: relative;
+tbody {
+  position: relative;
 }
-tbody > tr::after{
-    content: "";
-    position: absolute;
-    top: -1px;
-    left: 0;
-    width: 100%;
-    height: 3px;
-    background-color: white;
+tbody > tr::after {
+  content: "";
+  position: absolute;
+  top: -1px;
+  left: 0;
+  width: 100%;
+  height: 3px;
+  background-color: white;
 }
-th button{
-    background-color: transparent;
-    border: 1px solid white;
-    color: white;
+th button {
+  background-color: transparent;
+  border: 1px solid white;
+  color: white;
 }
-th button:hover{
-    transition: 0.5s;
-    -webkit-transition: 0.5s;
-    -moz-transition: 0.5s;
-    -ms-transition: 0.5s;
-    -o-transition: 0.5s;
-    color: gray;
+th button:hover {
+  transition: 0.5s;
+  -webkit-transition: 0.5s;
+  -moz-transition: 0.5s;
+  -ms-transition: 0.5s;
+  -o-transition: 0.5s;
+  color: gray;
+}
+.dataTables_empty {
+  width: 100%;
+} /*PARA CUANDO LA BUSCQUEDA NO TIENEN RESULTADOS*/
+.cont-btn-action {
+  display: flex;
+  justify-content: space-around;
+  color: white;
+}
+.btn-delete,
+.btn-edit {
+  color: inherit;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 5px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
+}
+.btn-delete {
+  color: inherit;
+  background-color: #f00;
+}
+.btn-edit {
+  color: inherit;
+  background-color: rgb(26, 101, 110);
 }
 /*Aside*/
-aside{
-    width: 100%;
-    margin: 4rem 0;
+aside {
+  width: 100%;
+  margin: 4rem 0;
 }
-h3{
-    font-weight: bold;
-    color: white;
-    text-align: center;
-    margin-bottom: 3rem;
-}
-form .inputCont{
-    width: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-wrap: wrap;
-}
-    .inputCont input{
-        margin: 0 0.2rem;
-        background-color: rgba(0, 0, 0, 0.5);
-        border: transparent;
-        border-radius: 5px;
-        -webkit-border-radius: 5px;
-        -moz-border-radius: 5px;
-        -ms-border-radius: 5px;
-        -o-border-radius: 5px;
-        color: white;
-        padding: 10px;
-    }
-    input::placeholder{
-        color: white;
-    }
-    .botonCont{
-        width: 100%;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-    }
-    .botonCont label{
-        width: 15%;
-        text-align: center;
-        margin-top: 1rem;
-        font-weight: bold;
-        font-size: 1.5rem;
-        cursor: pointer;
-        border-radius: 5px;
-        -webkit-border-radius: 5px;
-        -moz-border-radius: 5px;
-        -ms-border-radius: 5px;
-        -o-border-radius: 5px;
-        border: 2px solid rgba(0, 0, 0, 0.5);
-}
-        form label input{
-            background: transparent;
-            border: none;
-            color: white;
-            font-weight: bold;
-        }
-        form label i {
-            color: rgba(0, 0, 0, 0.5);       
-        }
 
-@media screen and (max-width: 920px) {
+/*Form agregar personas*/
+.Flex {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem 0;
+}
+.cont-input {
+  width: 100%;
+  padding: 0 10%;
+}
+.InputPrincipal {
+  width: 30%;
+}
+.InputPrincipal,
+.InputEdad,
+.InputBoton {
+  margin: 0.3rem 0;
+  border: 2px solid white;
+  border-radius: 5px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
+  color: white;
+  text-align: center;
+}
+.InputEdad,
+.InputBoton {
+  width: 18%;
+}
+.InputPrincipal,
+.InputEdad {
+  background-color: rgba(0, 0, 0, 0.5);
+}
+.InputPrincipal::placeholder,
+.InputEdad::placeholder {
+  color: rgb(255, 255, 255);
+  font-weight: bold;
+  text-align: center;
+}
+.InputBoton #BotonEnviar {
+  background-color: transparent;
+  color: white;
+  width: 100%;
+  border: none;
+}
 
-    section{
-        width: 100%;
-    }
-    aside{
-        width: 100%;
-    }
+/*Modal*/
+.InputModal {
+  margin-top: 1rem;
+}
+@media screen and (max-width: 767px) {
+  section {
+    width: 100%;
+  }
+  /*Tabla*/
+  .col-sm-12 {
+    overflow-x: scroll;
+  }
+  aside {
+    width: 100%;
+  }
+}
+@media screen and (max-width: 588px) {
+  .InputPrincipal {
+    width: 100%;
+  }
+  .InputEdad {
+    width: 30%;
+  }
+  .InputBoton {
+    width: 67%;
+    margin: 0;
+  }
 }
